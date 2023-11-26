@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Buyback</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Informations-Form -->
+      <div class="left-aside">
+        <div class="back-arrow">
+          <img src="./images/back-arrow.svg" alt="" />
+        </div>
+
+        <section class="form-area">
+          <h5 class="form-title">Kişisel bilgilerinizi doldurunuz</h5>
+          <p class="form-desc">
+            Geri alım sürecinizi hızlı ve sorunsuz bir şekilde ilerletmek için
+            bilgilerinizi eksiksiz bir şekilde doldurunuz.
+          </p>
+          <form action="" id="mainForm">
+            <div class="grid-container">
+              <div class="full-input">
+                <label for="tcNo">TC Kimlik Numarası</label>
+                <input
+                  type="text"
+                  id="tcNo"
+                  name="tcNo"
+                  value=""
+                  pattern="^[1-9]{1}[0-9]{9}[02468]{1}$"
+                  title="Lütfen TC Kimlik Numaranızı kontrol ediniz"
+                  maxlength="11"
+                  placeholder=""
+                />
+              </div>
+              <div class="full-input">
+                <label for="gsm">GSM Numarası</label>
+                <input
+                  id="gsm"
+                  name="gsm"
+                  pattern="^5[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}$"
+                  title="Örnek: 544 333 22 11"
+                  maxlength="13"
+                  placeholder="5XX XXX XX XX"
+                />
+              </div>
+              <div class="full-input">
+                <label for="ad">Ad</label>
+                <input type="text" id="ad" name="ad" placeholder="Ad" />
+              </div>
+              <div class="full-input">
+                <label for="soyad">Soyad</label>
+                <input
+                  type="text"
+                  id="soyad"
+                  name="soyad"
+                  placeholder="Soyad"
+                />
+              </div>
+              <div class="full-input">
+                <label for="email">E-posta Adresi</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+                  title="example@example.com"
+                  placeholder="example@example.com"
+                />
+              </div>
+              <div class="full-input">
+                <label for="iban-ad">IBAN Sahibi Ad Soyad</label>
+                <input
+                  type="text"
+                  id="iban-ad"
+                  name="iban-ad"
+                  pattern="^([\p{L}\p{N}]{2,})\s+([\p{L}\p{N}]+)$"
+                  title="Ad Soyad"
+                  placeholder="Ad Soyad"
+                />
+              </div>
+              <div class="full-input">
+                <label for="dogum">Doğum Yılı</label>
+                <input
+                  type="text"
+                  id="dogum"
+                  name="dogum"
+                  pattern="^(195[0-9]|19[6-9]\d|200[0-5])$"
+                  title="1950 ile 2005 arasında olmalıdır"
+                  placeholder="YYYY"
+                />
+              </div>
+              <div class="full-input" id="iban-input">
+                <label for="iban">Paranın Yatırılacağı Iban Numarası</label>
+                <input
+                  type="text"
+                  id="iban"
+                  name="iban"
+                  pattern="[Tt][Rr]\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{2}$"
+                  title="TRXX XXXX XXXX XXXX XX"
+                  maxlength="22"
+                  placeholder="TRXX XXXX XXXX XXXX XX"
+                />
+
+                <img id="info-icon" src="./images/info.svg" alt="info" />
+                <div id="info-box">
+                  <div>
+                    <img src="./images/infobox.svg" alt="infobox" />
+                    <p>
+                      Teklifi kabul etmeniz durumunda belirlenen ücretin
+                      hesabınıza yatırılması için IBAN numarınızı paylaşmanız
+                      gerekmektedir.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="confirmation-check">
+                <input
+                  class="confirmation"
+                  type="checkbox"
+                  id="contract1"
+                  name="contract1"
+                  checked
+                />
+                <label for="contract1">
+                  <span>Cihaz Aydınlatma Metnini </span>okudum ve
+                  onaylıyorum.</label
+                >
+              </div>
+              <div class="confirmation-check">
+                <input
+                  class="confirmation"
+                  type="checkbox"
+                  id="contract2"
+                  name="contract2"
+                  checked
+                />
+                <label for="contract2">
+                  <span>Ticari bilgilendirme Sözleşmesini </span> okudum ve
+                  onaylıyorum.</label
+                >
+              </div>
+              <div class="confirmation-check">
+                <input
+                  class="confirmation"
+                  type="checkbox"
+                  id="contract3"
+                  name="contract3"
+                  checked
+                />
+                <label for="contract3">
+                  <span>Geri Alım Sözleşmesini</span> okudum ve
+                  onaylıyorum.</label
+                >
+              </div>
+            </div>
+            <button class="sa" id="submit-button" type="submit">
+              <i class="fa fa-spinner fa-spin" id="fa-spin"></i>
+              <p id="button-text">Geri Alım Talebini Tamamla</p>
+            </button>
+          </form>
+
+          <p class="info">
+            Değiş-Tokuş hakkında <span>daha fazla bilgi edinin</span>
+          </p>
+        </section>
+      </div>
+      <!-- Informations-Form -->
+
+      <!-- Summary-Tooltip -->
+      <div class="summary-tooltip">
+        <div>
+          <div class="summary-tooltip-title">
+            <h4>İşlem Özeti</h4>
+            <img
+              id="modal-open-button"
+              src="./images/cancel.svg"
+              alt="cancel"
+              onclick="openModal()"
+            />
+          </div>
+          <div class="device-summary-card">
+            <div class="device-image">
+              <img src="./images/iPhone1.png" alt="iphone1" />
+            </div>
+            <div class="device-desc">
+              <h6 class="device-status">Geri Alınacak Cihaz</h6>
+              <h5 class="device-name">
+                Apple iPhone 11 <br />
+                Mor - 128GB
+              </h5>
+            </div>
+          </div>
+          <div class="device-summary-card">
+            <div class="device-image">
+              <img src="./images/iPhone2.png" alt="iphone1" />
+            </div>
+            <div class="device-desc">
+              <h6 class="device-status">Yeni Cihaz</h6>
+              <h5 class="device-name">
+                Apple iPhone 13 <br />
+                Black - 256GB
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="buyback-offer">
+          <h4>Geri Alım Teklifi</h4>
+          <div class="amounts">
+            <div class="offer-price">
+              <h6 class="offer-price-title">Yeni Cihaz Değeri:</h6>
+              <h5 class="offer-price-amount">22.500 TL</h5>
+            </div>
+            <div class="offer-price">
+              <h6 class="offer-price-title">Eski Cihaz Değeri:</h6>
+              <h5 class="offer-price-amount">-2.500 TL</h5>
+            </div>
+            <div class="offer-price">
+              <h6 class="offer-price-title">Ek Kampanya Tutarı:</h6>
+              <h5 class="offer-price-amount">-2. 000 TL</h5>
+            </div>
+          </div>
+          <div class="offer-price-total">
+            <h6 class="offer-price-total-title">Toplam Teklif:</h6>
+            <h5 class="offer-price-total-amount">15.000 TL</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Summary-Tooltip -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-container">
+        <div id="modal-close">
+          <img
+            id="modal-close-button"
+            src="./images/cancel.svg"
+            alt=""
+            onclick="closeModal()"
+          />
+        </div>
+        <img id="modal-alert" src="./images/alert.svg" alt="alert" />
+        <h2 id="modal-title">İşleminiz henüz tamamlanmadı</h2>
+        <h4 id="modal-subtitle">
+          Bize işlemi neden tamamlamak istemediğinizi söyleyebilir misiniz?
+        </h4>
+        <form>
+          <input
+            list="reasons"
+            id="reason"
+            name="reason"
+            placeholder="Seçiniz"
+          />
+          <datalist id="reasons">
+            <option value="Teklifi beğenmedim"></option>
+            <option value="Başka bir firmadan teklif aldım"></option>
+          </datalist>
+        </form>
+        <div class="modal-buttons">
+          <button id="submit-button">Devam Et</button>
+          <button id="submit-button" onclick="closeModal()">Çıkış</button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <script src="./mainscript.js"></script>
+  </body>
+</html>

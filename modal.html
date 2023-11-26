@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="modal-container">
+      <div id="modal-close">
+        <img src="./images/cancel.svg" alt="" />
+      </div>
+      <img id="modal-alert" src="./images/alert.svg" alt="alert" />
+      <h2 id="modal-title">İşleminiz henüz tamamlanmadı</h2>
+      <h4 id="modal-subtitle">
+        Bize işlemi neden tamamlamak istemediğinizi söyleyebilir misiniz?
+      </h4>
+      <form>
+        <input list="reasons" id="reason" name="reason" placeholder="Seçiniz" />
+        <datalist id="reasons">
+          <option value="Teklifi beğenmedim"></option>
+          <option value="Başka bir firmadan teklif aldım"></option>
+        </datalist>
+      </form>
+      <div class="modal-buttons">
+        <button id="submit-button">Devam Et</button>
+        <button id="submit-button">Çıkış</button>
+      </div>
+    </div>
+  </body>
+</html>

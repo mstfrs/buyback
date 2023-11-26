@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Result</title>
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Transaction Info -->
+      <div id="result-left-aside">
+        <div class="back-arrow">
+            <img id="back-arrow-button" onclick="goBack()" src="./images/back-arrow.svg" alt="" />
+          </div>
+        <section class="result-area">
+          <h5 class="result-title">Geri alım talebinizi aldık.</h5>
+          <h4 class="result-subtitle">Şimdi yeni cihazınızı almalısınız.</h4>
+          <p class="result-desc">
+            Geri alım teklifinden faydalanmak için yeni cihazınızın satın alma
+            işlemini
+            <span>24 saat içerisinde tamamlanız gerekmektedir.</span> Aksi
+            halde, cihaz yenileme talebiniz geçersiz olacaktır.
+          </p>
+        </section>
+        <section id="transaction-summary">
+          <h3 id="transaction-summary-title">Değiş-Tokuş İşlem Özeti</h3>
+          <div id="device-summary-info">
+            <div class="device-summary-card">
+                <div class="device-image">
+                  <img src="./images/iPhone1.png" alt="iphone1" />
+                </div>
+                <div class="device-desc">
+                  <h6 class="device-status">Geri Alınacak Cihaz</h6>
+                  <h5 class="device-name">
+                    Apple iPhone 11 <br />
+                    Mor - 128GB
+                  </h5>
+                </div>
+              </div>
+              
+              <div class="device-summary-card">
+                <div class="device-image">
+                  <img src="./images/iPhone2.png" alt="iphone1" />
+                </div>
+                <div class="device-desc">
+                  <h6 class="device-status">Yeni Cihaz</h6>
+                  <h5 class="device-name">
+                    Apple iPhone 13 <br />
+                    Black - 256GB
+                  </h5>
+                </div>
+              </div>
+              <div class="device-summary-card" id="total-offer">
+               
+               
+                  <h6 class="total-offer-title">Toplam Teklif</h6>
+                  <h5 class="total-offer-amount">
+                    15.000 TL
+                  </h5>
+                
+              </div>
+          </div>
+        </section>
+        <section id="reference-info">
+            <h3 id="reference-info-title">Referans Numarası</h3>
+            <div id="reference-number">
+                <input type="text" value="1234 - 5678 -9012" id="reference-number-number" >
+                <img src="./images/copyicon.svg" alt="copyicon" id="copyicon">
+            </div>
+            <p>Geri Alım Sürecinizi referans numaranız ile takip edebilirsiniz.</p>
+            
+        </section>
+        <p class="info" id="info">
+          Değiş-Tokuş hakkında <span>daha fazla bilgi edinin</span>
+        </p>
+      </div>
+      <!-- Transaction Info -->
+
+      <!-- Summary -->    
+      <div class="summary-result">
+        <div>
+          <div class="summary-result-title">
+            <h4>Şimdi sırada ne var?</h4>
+            <img src="./images/cancel.svg" alt="cancel" />
+          </div>
+         <div id="next-steps">
+            <div class="steps">
+                <img src="./images/step1.svg" alt="step1">
+                <p>Geri gönderim kiti ile eski cihazınızı bize gönderin.</p>
+            </div>
+            <div class="steps">
+                <img src="./images/step2.svg" alt="step1">
+                <p>Cihaz testleri tamamlandıktan sonra size son teklifi sunacağız.</p>
+            </div>
+            <div class="steps">
+                <img src="./images/step3.svg" alt="step1">
+                <p>Kabul etmeniz durumunda tutarı
+                    banka hesabınıza göndereceğiz.</p>
+            </div>
+            
+
+         </div>
+         
+         <div class="counter">
+            <div class="counter-circles">
+
+            
+            <svg id="circle1" viewbox="0 0 16 16" width="140px" height="140px" fill="none">
+
+                <circle cx="8" cy="8" r="4" stroke="#0071E3" 
+                data-fallback="edge"
+                  stroke-width="8px"
+                  transform="rotate(-90, 8, 8)"
+                  stroke-dasharray="0, 100" >
+                  
+                  <animate attributeName="stroke-dasharray"
+                    dur="240s" to="100,100"
+                    fill="freeze" />                                
+              </svg> 
+              <svg id="circle2" viewbox="0 0 16 16" width="140px" height="140px" fill="none">
+
+                <circle cx="8" cy="8" r="3" stroke="#fff" 
+                data-fallback="edge"
+                  stroke-width="8px"
+                   >
+                  
+                 
+                   
+                
+                   
+               
+              </svg> 
+              <p id="seconds"><span id="second"></span><br/>Saniye</p>
+            </div>
+            
+            <p>sonra yeni cihaz satın alımı için yönlendireceksiniz.</p>
+
+         </div>
+          </div>
+         <button id="submit-button">
+            Yeni cihaz için alışverişe devam et
+          </button>
+          <div id="faq">
+            <p >Sıkça Sorulan Sorular</p>
+            <img src="./images/faq.svg" alt="faq">
+          </div>
+          
+        </div>
+
+        
+      </div>
+      <!-- Summary-Tooltip -->
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
